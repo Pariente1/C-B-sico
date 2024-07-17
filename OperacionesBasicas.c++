@@ -2,8 +2,8 @@
 #include <iostream>
 
 using namespace std;
-int valor1;
-int valor2;
+float valor1;
+float valor2;
 int resultadoSuma;
 int resultadoResta;
 int resultadoMultiplicacion;
@@ -16,21 +16,22 @@ int main()
     cout << "Teclea el segundo valor: ";
     cin >> valor2;
     
-    resultadoSuma=valor1+valor2;
+    float resultadoSuma=valor1+valor2;
     
     cout <<"La suma es: " << resultadoSuma << "\n";
     
-    resultadoResta=valor1-valor2;
+    float resultadoResta=valor1-valor2;
     
     cout << "La resta es: " <<resultadoResta << "\n";
     
-    resultadoMultiplicacion = valor1*valor2;
+    float resultadoMultiplicacion = valor1*valor2;
     
     cout <<"La multiplicacion es: "<< resultadoMultiplicacion << "\n";
     
-    resultadoDivision = valor1 / valor2;
+    float resultadoDivision = valor1 / valor2;
     
     cout << "La division es: " << resultadoDivision << "\n";
     
     return 0;
 }
+
