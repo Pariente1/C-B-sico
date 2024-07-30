@@ -82,6 +82,15 @@ int main()
     // Aquí cambiamos todas las letras a mayusculas
     transform(RFC.begin(), RFC.end(), RFC.begin(), ::toupper);
     
+    // Aqui colocamos la primera vocal después de la primera consonante en el primer apellidoPaterno para generar el RFC.
+    RFC += apellidoPaterno[1]; 
+    for (char c : apellidoPaterno) { 
+        if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') { 
+            RFC += c; break;     
+        };
+        
+    };
+
     //Aquí nos aseguramos que no tenga ninguna de las palabras indeseadas {CULO, CACA, TETA}
     for (const auto& par : palabrasIndeseadas)/* auto& existe para deducir automaticamente el tipo de dato que es palabrasIndeseadas */ {
     size_t pos = RFC.find(par.first);
